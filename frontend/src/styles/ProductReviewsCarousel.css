@@ -1,0 +1,213 @@
+/* Product Reviews Carousel Styles */
+.reviews-carousel-wrapper {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.reviews-carousel-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.reviews-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Review Card */
+.review-card {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Review Header */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.reviewer-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.reviewer-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+
+.reviewer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviewer-name-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+/* Review Rating */
+.review-rating {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.star-icon {
+  color: #FFD700;
+  transition: transform 0.2s ease;
+}
+
+.star-icon.filled {
+  animation: starPop 0.3s ease;
+}
+
+@keyframes starPop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Review Text */
+.review-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 320px;
+    padding: 20px;
+  }
+
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reviewer-name {
+    font-size: 14px;
+  }
+
+  .review-date {
+    font-size: 12px;
+  }
+
+  .review-text {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+  }
+
+  .star-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    flex: 0 0 280px;
+    padding: 16px;
+  }
+
+  .reviews-carousel-track {
+    gap: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reviews-carousel-track {
+    animation: none;
+  }
+  
+  .reviews-carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .review-card {
+    scroll-snap-align: start;
+  }
+}

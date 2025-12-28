@@ -1,0 +1,75 @@
+.auth-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+}
+
+.auth-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 10001;
+}
+
+.auth-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+}
+
+.auth-popup-content {
+  text-align: center;
+}
+
+.auth-popup h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.auth-popup p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.auth-popup-button {
+  width: 100%;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.auth-popup-later {
+  width: 100%;
+  padding: 12px 30px;
+  background: transparent;
+  color: #666;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+}

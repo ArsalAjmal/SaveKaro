@@ -1,0 +1,87 @@
+import React, { useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Lenis from 'lenis';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import CategoryPage from './components/CategoryPage';
+import ProductDetailPage from './components/ProductDetailPage';
+import Footer from './components/Footer';
+import NavigationLoader from './components/NavigationLoader';
+
+function App() {
+  const lenisRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize Lenis smooth scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    lenisRef.current = lenis;
+    
+    // Make Lenis accessible globally for scroll to top
+    window.lenis = lenis;
+
+    // Animation frame loop
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Cleanup
+    return () => {
+      lenis.destroy();
+      window.lenis = null;
+    };
+  }, []);
+
+  return (
+    <Router>
+      <div className="App">
+        <NavigationLoader />
+        <Header />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/deals" element={<HomePage />} />
+            
+            {/* Product Detail Route */}
+            <Route path="/product/:id" element={<ProductDetailPage />} />
+            
+            {/* Gender + Category Routes (e.g., /men/jeans, /women/shirts) */}
+            <Route path="/men/:category" element={<CategoryPage />} />
+            <Route path="/women/:category" element={<CategoryPage />} />
+            
+            {/* Category Routes */}
+            <Route path="/category/:category" element={<CategoryPage />} />
+            
+            {/* Direct Category Routes */}
+            <Route path="/men" element={<CategoryPage />} />
+            <Route path="/women" element={<CategoryPage />} />
+            <Route path="/jeans" element={<CategoryPage />} />
+            <Route path="/pants" element={<CategoryPage />} />
+            <Route path="/jackets" element={<CategoryPage />} />
+            <Route path="/hoodies" element={<CategoryPage />} />
+            <Route path="/shirts" element={<CategoryPage />} />
+            <Route path="/sweaters" element={<CategoryPage />} />
+            <Route path="/eastern" element={<CategoryPage />} />
+            <Route path="/western" element={<CategoryPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;

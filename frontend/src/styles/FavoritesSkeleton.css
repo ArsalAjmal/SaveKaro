@@ -1,0 +1,133 @@
+/* Favorites Skeleton Loading Styles */
+.favorites__skeleton-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.favorites__skeleton-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.favorites__skeleton-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.favorites__skeleton-brand {
+  height: 12px;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.favorites__skeleton-title {
+  height: 14px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  animation-delay: 0.1s;
+  border-radius: 4px;
+}
+
+.favorites__skeleton-title-short {
+  height: 14px;
+  width: 75%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  animation-delay: 0.15s;
+  border-radius: 4px;
+}
+
+.favorites__skeleton-pricing {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.favorites__skeleton-price {
+  height: 16px;
+  width: 80px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  animation-delay: 0.2s;
+  border-radius: 4px;
+}
+
+.favorites__skeleton-discount {
+  height: 16px;
+  width: 60px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  animation-delay: 0.25s;
+  border-radius: 4px;
+}
+

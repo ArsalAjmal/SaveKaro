@@ -1,0 +1,18 @@
+/* Parallax Scroll Effects - Smooth Performance */
+.parallax-container {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Prevent layout shifts */
+.carousel-3d-container,
+.animation-section {
+  overflow: hidden;
+}
+
+/* GPU acceleration for smooth parallax */
+.carousel-3d-image,
+.animation-video-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

@@ -1,0 +1,60 @@
+brands:
+  - key: limelight
+    brand: Limelight
+    platform: shopify
+    domain: https://www.limelight.pk
+    collections:
+      - url: https://www.limelight.pk/collections/50-sale?filter.p.m.custom.gender=Women
+        gender: women
+      - url: https://www.limelight.pk/collections/50-sale?filter.p.m.custom.gender=Men
+        gender: men
+
+  - key: sapphire
+    brand: Sapphire
+    platform: shopify
+    domain: https://pk.sapphireonline.pk
+    collections:
+      - url: https://pk.sapphireonline.pk/collections/sale?filter.v.availability=1&filter.p.tag=Women
+        gender: women
+      - url: https://pk.sapphireonline.pk/collections/sale?filter.v.availability=1&filter.p.tag=Men
+        gender: men
+      - url: https://pk.sapphireonline.pk/collections/special-offer-sale
+
+  - key: outfitters
+    brand: Outfitters
+    platform: shopify
+    domain: https://outfitters.com.pk
+    collections:
+      - url: https://outfitters.com.pk/collections/women-special-prices
+        gender: women
+      - url: https://outfitters.com.pk/collections/men-special-prices
+        gender: men
+      - url: https://outfitters.com.pk/collections/women-special-prices?filter.p.m.custom.product_type=Sweaters
+        gender: women
+        type: sweater
+      - url: https://outfitters.com.pk/collections/women-special-prices?filter.p.m.custom.product_type=Shirts
+        gender: women
+        type: shirt
+
+  - key: bonanza
+    brand: Bonanza Satrangi
+    platform: shopify
+    domain: https://bonanzasatrangi.com
+    collections:
+      - url: https://bonanzasatrangi.com/collections/sale
+      - url: https://bonanzasatrangi.com/collections/unstitched-sale
+        type: suit
+
+  # Gul Ahmed is likely not Shopify; we'll add an HTML spider next.
+  - key: gulahmed
+    brand: Gul Ahmed
+    platform: html
+    domain: https://www.gulahmedshop.com
+    collections:
+      - url: https://www.gulahmedshop.com/sale
+      - url: https://www.gulahmedshop.com/sale/gender-women
+        gender: women
+      - url: https://www.gulahmedshop.com/sale/gender-men
+        gender: men
+      - url: https://www.gulahmedshop.com/sale?filter.p.m.custom.category=Sweaters
+        type: sweater

@@ -1,0 +1,10 @@
+use("fwd_project") // you can name the DB same as your folder or 'deal_aggregator'
+
+db.products.insertOne({
+  title: "MongoDB Test Item",
+  brand: "Demo Brand",
+  price: 999,
+  discount_percent: 20,
+  source: "test"
+})
+

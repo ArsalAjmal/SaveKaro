@@ -1,0 +1,133 @@
+/* Product Skeleton Loading Animation */
+.product-skeleton {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e8e8e8 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-brand {
+  width: 40%;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e8e8e8 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  width: 90%;
+  height: 14px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e8e8e8 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-title.short {
+  width: 60%;
+}
+
+.skeleton-price-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.skeleton-price {
+  width: 70px;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e8e8e8 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-original-price {
+  width: 60px;
+  height: 14px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e8e8e8 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skeleton-content {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .skeleton-brand {
+    height: 10px;
+  }
+  
+  .skeleton-title {
+    height: 12px;
+  }
+  
+  .skeleton-price {
+    height: 16px;
+  }
+  
+  .skeleton-original-price {
+    height: 12px;
+  }
+}

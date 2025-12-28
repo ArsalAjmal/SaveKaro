@@ -1,0 +1,115 @@
+/* Skeleton Loading Styles */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton-title {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.skeleton-suggestion-item {
+  padding: 8px 0;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.skeleton-line-short {
+  width: 60%;
+}
+
+.skeleton-line-medium {
+  width: 80%;
+}
+
+.skeleton-line-long {
+  width: 100%;
+}
+
+.skeleton-product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+.skeleton-product-image {
+  width: 100%;
+  padding-bottom: 133.33%; /* 3:4 aspect ratio */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+  position: relative;
+}
+
+.skeleton-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Delay animations for a more natural effect */
+.skeleton-product-card:nth-child(1) .skeleton-product-image,
+.skeleton-product-card:nth-child(1) .skeleton-line {
+  animation-delay: 0s;
+}
+
+.skeleton-product-card:nth-child(2) .skeleton-product-image,
+.skeleton-product-card:nth-child(2) .skeleton-line {
+  animation-delay: 0.1s;
+}
+
+.skeleton-product-card:nth-child(3) .skeleton-product-image,
+.skeleton-product-card:nth-child(3) .skeleton-line {
+  animation-delay: 0.2s;
+}
+
+.skeleton-product-card:nth-child(4) .skeleton-product-image,
+.skeleton-product-card:nth-child(4) .skeleton-line {
+  animation-delay: 0.3s;
+}
+
+.skeleton-product-card:nth-child(5) .skeleton-product-image,
+.skeleton-product-card:nth-child(5) .skeleton-line {
+  animation-delay: 0.4s;
+}
+
+.skeleton-product-card:nth-child(6) .skeleton-product-image,
+.skeleton-product-card:nth-child(6) .skeleton-line {
+  animation-delay: 0.5s;
+}
+
+.skeleton-product-card:nth-child(7) .skeleton-product-image,
+.skeleton-product-card:nth-child(7) .skeleton-line {
+  animation-delay: 0.6s;
+}
+
+.skeleton-product-card:nth-child(8) .skeleton-product-image,
+.skeleton-product-card:nth-child(8) .skeleton-line {
+  animation-delay: 0.7s;
+}
+
+.skeleton-product-card:nth-child(9) .skeleton-product-image,
+.skeleton-product-card:nth-child(9) .skeleton-line {
+  animation-delay: 0.8s;
+}

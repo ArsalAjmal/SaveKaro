@@ -1,0 +1,83 @@
+/* Mindset Section */
+.mindset-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.mindset-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mindset-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.mindset-description {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mindset-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mindset-section {
+    padding: 60px 40px;
+  }
+  
+  .mindset-title {
+    font-size: 2.2rem;
+  }
+  
+  .mindset-text {
+    font-size: 1.0625rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mindset-section {
+    padding: 50px 30px;
+  }
+  
+  .mindset-title {
+    font-size: 1.875rem;
+    margin-bottom: 30px;
+  }
+  
+  .mindset-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .mindset-section {
+    padding: 40px 20px;
+  }
+  
+  .mindset-title {
+    font-size: 1.625rem;
+    margin-bottom: 25px;
+  }
+  
+  .mindset-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+}

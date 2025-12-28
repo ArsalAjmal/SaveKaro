@@ -1,0 +1,4 @@
+scrapy==2.11.1
+PyYAML==6.0.2
+pymongo[srv]==4.8.0
+python-dotenv==1.0.1

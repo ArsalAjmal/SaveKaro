@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
-import { useParams, useSearchParams, useLocation, Link } from 'react-router-dom';
+import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import ProductSkeleton from './ProductSkeleton';
 import '../styles/CategoryPage.css';
 

@@ -7,7 +7,6 @@ import '../styles/ProductCarousel.css';
 const ProductCarousel = ({ title = "Hoodies & Jackets", categories = ["Hoodies", "Jackets"], limit = 10, gender = null }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -80,10 +79,6 @@ const ProductCarousel = ({ title = "Hoodies & Jackets", categories = ["Hoodies",
           // Check if any variant with a standard size is in stock
           return variants.some(variant => {
             if (!variant.in_stock) return false;
-            
-            // Check if variant has a recognizable size
-            const sizeStr = (variant.size || '').toString();
-            const hasStandardSize = /\b(XXS|XS|S|M|L|XL|XXL|2XL|3XL)\b/i.test(sizeStr);
             
             // If it has a standard size and is in stock, product is available
             // If no standard size found, still consider it available if in_stock is true
@@ -163,7 +158,8 @@ const ProductCarousel = ({ title = "Hoodies & Jackets", categories = ["Hoodies",
     };
 
     fetchProducts();
-  }, [categories, limit, gender]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categories, limit, gender, title]);
 
   const carouselRef = useRef(null);
 

@@ -12,7 +12,7 @@ import '../styles/MyAccount.css';
 import '../styles/FavoritesSection.css';
 
 const MyAccount = () => {
-  const { user, isAuthenticated, logout, refreshUser } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('profile');
   const [isEditing, setIsEditing] = useState(false);

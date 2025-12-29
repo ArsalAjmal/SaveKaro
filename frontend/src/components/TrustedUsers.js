@@ -17,13 +17,15 @@ const CountUp = ({ value, duration = 2, separator = ',', suffix = '', className 
       { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+    
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [isVisible]);
@@ -77,7 +79,6 @@ const TrustedUsers = ({
   ];
 
   const displayAvatars = avatars.length > 0 ? avatars : defaultAvatars;
-  const defaultRingColors = ['ring-pink-500', 'ring-blue-500', 'ring-purple-500', 'ring-green-500', 'ring-red-500'];
 
   return (
     <section className="trusted-users-section">

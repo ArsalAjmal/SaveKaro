@@ -133,15 +133,15 @@ function LoginSignup() {
               </button>
               <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
-                <a href="#" className="social-icon">
+                <button type="button" className="social-icon">
                   <FaFacebookF />
-                </a>
-                <a href="#" className="social-icon">
+                </button>
+                <button type="button" className="social-icon">
                   <FaGoogle />
-                </a>
-                <a href="#" className="social-icon">
+                </button>
+                <button type="button" className="social-icon">
                   <FaLinkedinIn />
-                </a>
+                </button>
               </div>
             </form>
 
@@ -185,15 +185,15 @@ function LoginSignup() {
               </button>
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
-                <a href="#" className="social-icon">
+                <button type="button" className="social-icon">
                   <FaFacebookF />
-                </a>
-                <a href="#" className="social-icon">
+                </button>
+                <button type="button" className="social-icon">
                   <FaGoogle />
-                </a>
-                <a href="#" className="social-icon">
+                </button>
+                <button type="button" className="social-icon">
                   <FaLinkedinIn />
-                </a>
+                </button>
               </div>
             </form>
           </div>

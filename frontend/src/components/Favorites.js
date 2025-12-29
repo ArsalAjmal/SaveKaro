@@ -6,7 +6,7 @@ import axios from 'axios';
 import '../styles/Favorites.css';
 
 const Favorites = () => {
-  const { user, isAuthenticated, setShowAuthPopup } = useAuth();
+  const { isAuthenticated, setShowAuthPopup } = useAuth();
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,6 +16,7 @@ const Favorites = () => {
       return;
     }
     fetchFavorites();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
   const fetchFavorites = async () => {

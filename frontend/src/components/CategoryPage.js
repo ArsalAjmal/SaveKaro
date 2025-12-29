@@ -7,10 +7,7 @@ import '../styles/CategoryPage.css';
 const CategoryPage = () => {
   const { category: urlCategory } = useParams();
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
-  
-  // Extract category from URL path if not in params
-  const category = urlCategory || location.pathname.split('/')[1];
+  const [searchParams] = useSearchParams();
   
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -236,6 +233,7 @@ const CategoryPage = () => {
     }
     setPriceRange({ min: '', max: '' });
     setMinDiscount(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]); // Reset when path changes
   
   // Reset page when filters change
@@ -243,6 +241,7 @@ const CategoryPage = () => {
     if (initialLoading) return; // Don't trigger on initial load
     setPage(1);
     setProducts([]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedBrands, priceRange, minDiscount, sortBy]);
 
   // Handle brand filter

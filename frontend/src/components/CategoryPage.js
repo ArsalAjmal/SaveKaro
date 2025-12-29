@@ -5,7 +5,6 @@ import ProductSkeleton from './ProductSkeleton';
 import '../styles/CategoryPage.css';
 
 const CategoryPage = () => {
-  const { category: urlCategory } = useParams();
   const location = useLocation();
   const [searchParams] = useSearchParams();
   

@@ -465,8 +465,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Arsal Ajmal**
 
 - GitHub: [@ArsalAjmal](https://github.com/ArsalAjmal)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/arsal-ajmal)
-- Email: arsal@example.com
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/arsal-ajmal-473786205/)
+- Email: arsal.ajmal621@gmail.com
+
+**Maham Kamran Mirza**
+
+- Github: [@MahamKamranMirza] ()
+- LinkedIn: [Connect with me] ()
+- Email: mahamkmirza08@gmail.com
 
 ---
 
